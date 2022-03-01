@@ -1,0 +1,88 @@
+﻿@using _28._022022_MVCGiris.Library
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index3</title>
+</head>
+
+<body>
+    <div>
+        <style>
+            .kirmizi {
+                color: red
+            }
+
+            #text1 {
+                color: green
+            }
+
+
+            div {
+                width: 400px;
+                height: 400px;
+                background-color: aquamarine;
+            }
+
+            p.renk {
+                color: darkblue;
+                background-color: darkgray;
+                font: 15px;
+            }
+
+            div > p {
+                font-size: 20px;
+                font-family: 'Comic Sans MS';
+                color: red;
+                background-color: burlywood;
+                text-align: center;
+            }
+            img{
+                height:100px;
+                width:100px;
+                position:center;
+            }
+        </style>
+
+
+
+
+        <asp:Button contextmenu="Tıkla" />
+        <input type="text" name="text1" id="text1" class="kirmizi" />
+        <input type="button" value="Tıkla" class="kirmizi" />
+        <hr /><br />
+        <a href="http://www.google.com">Google</a>
+        <br />
+        <a href="Index2">Index2 Sayfasına Git</a>
+        <br />
+        @*<button id="btn1" name="btn1" type="button">Ekle</button>
+        <button id="" name="" type=""></button>*@
+        <br /><br />
+
+        <img src="~/image/img.png" alt="Resime tıkla"  />
+        <br /><br />
+        @Html.ActionLink("Kategori Sayfasına Git", "Kategori") <br /><br />
+        @Html.TextBox("text2", "Adınız")<br /><br />
+        @Html.TextArea("textarea1", "Açıklama", 10, 10, null)
+        <br /><br />
+        @Html.ActionLink("Index sayfasına git", "Index",
+        new { isim = "hatice" },
+        new
+             {
+                 title = "index sayfasına yönlendirir",
+         @class = "kirmizi"
+             })
+        @Html.Button("btn1",MyExtensions.ButtonTip.button, "Gönder")
+        <p class="renk">Divler Dışında Paragraf</p>
+        <div>
+            <p>
+                Merhaba Dünya
+            </p>
+        </div>
+</body>
+</html>

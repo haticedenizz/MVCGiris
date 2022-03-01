@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Index4";
+}
+
+<h2>Index4</h2>
+
+<a href="/Home/Index3">Index3 sayfasına git</a>
+<hr />
+
+@Html.ActionLink("İndex3 sayfasına git", "Index3", "Home")
+<br />
+<hr />
+
+<a href=@Url.Action("Index3","Home")>Index3 sayfasına git</a>
+<br />
+<hr />
+@Url.Action("Index3")
+<br />
+<hr />
+@Url.Content("~/Home/Index3")
+<br />
+<hr />
+@Url.Encode("~/Home/Index3?arama=Hatice Deniz")
+<br />
+<hr />
+@HttpUtility.HtmlEncode("<b>Hatice Deniz</b>")
+@HttpUtility.HtmlDecode("&lt;b&gt;Hatice Deniz&lt;/b&gt;")
+<hr />
+@HttpUtility.UrlEncode("http://www.google.com/")
+<hr />
+@HttpUtility.UrlDecode("http%3a%2f%2fwww.google.com%2f")
+<hr />
+<br />
+@Html.Raw(" <b> Hatice Deniz </b> ")
+<hr />
+<br />
+@Html.Raw("<script>alert ('merhaba')</script>")
+<hr />
+<br />
+@Html.Raw("<style>h2{color:red}</style>")
+
